@@ -1,0 +1,1 @@
+This operations is used to paste text in the clipboard.The operation will not work if clipboard is empty .

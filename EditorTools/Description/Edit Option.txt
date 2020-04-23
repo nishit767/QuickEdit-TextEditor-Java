@@ -1,0 +1,2 @@
+It displays a menu of the essential commands for the QuickEdit.
+The menu items include Cut,Copy,Paste,Delete,Undo,Redo,Select All and Time Stamp.

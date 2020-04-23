@@ -1,0 +1,1 @@
+This operations is used to delete the selected text in the document and copy that text to clipboard.The operation will not work if text is not selected.

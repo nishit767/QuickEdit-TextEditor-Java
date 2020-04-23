@@ -1,0 +1,1 @@
+This operations is used to save a QuickEdit document on the device if the file is saved alteast once on the device or will execute the save as command to create the copy of the document on the device.

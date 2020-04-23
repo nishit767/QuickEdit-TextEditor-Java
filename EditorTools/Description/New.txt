@@ -1,0 +1,1 @@
+This operations is used to open a new QuickEdit document.

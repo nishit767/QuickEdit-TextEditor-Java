@@ -1,0 +1,1 @@
+This operations is used to find a input text in the whole document and highlight the result.The operation will display a dialog box with message"Text not found", if the input text is not found.

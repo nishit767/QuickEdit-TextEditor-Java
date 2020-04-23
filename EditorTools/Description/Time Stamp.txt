@@ -1,0 +1,1 @@
+This operations is used to add a Time stamp where the cursor is present in the text field.

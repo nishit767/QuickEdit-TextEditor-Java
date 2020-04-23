@@ -1,0 +1,1 @@
+This operations is used to close the QuickEdit Document if it is saved on the device or will ask the user to save the document or close it.

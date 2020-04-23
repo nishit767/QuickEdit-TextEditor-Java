@@ -1,0 +1,1 @@
+This operations is used to copy the selected text in the document to clipboard.The operation will not work if text is not selected.

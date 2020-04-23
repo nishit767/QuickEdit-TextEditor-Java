@@ -1,0 +1,2 @@
+It displays a dialog box of the essential commands for the styling of text.
+The commands are Font Style,Bold,tallic,Underline and Font size.

@@ -1,0 +1,1 @@
+This operations is used to open a QuickEdit document present on the device.

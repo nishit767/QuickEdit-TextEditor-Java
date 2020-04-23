@@ -1,0 +1,1 @@
+This operations is used to select all the text present in the document.

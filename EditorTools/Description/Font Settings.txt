@@ -1,0 +1,1 @@
+This operations is used to open a dialog box to style the text in the document with opertions like bold, underline, itallic, font size and font style. 

@@ -1,0 +1,1 @@
+This operations is used to find a input text in the whole document and then replace the text found with the replace text provided by the user .There are two options to replace the input text as a string only or as string and substring both.The operation will display a dialog box with message"Text not found", if the input text is not found.
