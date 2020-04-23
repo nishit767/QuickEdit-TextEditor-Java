@@ -8,7 +8,7 @@ The best thing about out editor is that it is a secured editor which saves each 
 
 If you try to open this file with any other editor you would see an encrypted data.This will help to keep the data secured .
 
-Also there would be a commit for executable jar file named QuickEdit.jar. TO execute this jar file you need a java runtime environment with version 1.8 and above.
+Also there would be a commit for executable jar file named QuickEdit.jar. TO execute this jar file you need a java runtime environment with class file version 57.0 and above.
 
 This editor incorporates new functioniality to replace a string only . It is found in most of the editors that in most of the editors the replace functionality replaces all the strings and substings same as the entered input with the required output. We provide an functionality to replace the given strings only matching the input pattern or to replace both strings and sub-strings matching the input with the required output.
 
