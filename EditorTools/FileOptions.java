@@ -1,11 +1,9 @@
 package EditorTools;
 // Importing Packages that will be used for File Operations
-import javax.swing.SwingUtilities;
 import javax.swing.JFrame;
 import javax.swing.JTextArea;
 import javax.swing.event.DocumentListener;
 import javax.swing.event.DocumentEvent;
-import javax.swing.JMenuItem;
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.JOptionPane;
@@ -123,17 +121,26 @@ public class FileOptions implements DocumentListener
 
     					}
 						mypassword = fso.getPassword();
-						fso.decryptFileData(mypassword,fmyfile);
-						BufferedReader mybr = new BufferedReader(new FileReader(fmyfile));
-						String myfcont = "", line = "";
-						while((line = (String)mybr.readLine()) != null)
-							myfcont += line+"\n";
-						mybr.close();
-						fta.setText(myfcont);
-						myframe.setTitle(fmyfile.getName());
-						saveasflag = true;
-						saveflag = true;
-						editflag = false;
+						boolean x = fso.decryptFileData(mypassword,fmyfile);
+						if(x)
+						{
+							BufferedReader mybr = new BufferedReader(new FileReader(fmyfile));
+							String myfcont = "", line = "";
+							while((line = (String)mybr.readLine()) != null)
+								myfcont += line+"\n";
+							mybr.close();
+							fta.setText(myfcont);
+							fso.encryptFileData(mypassword, fmyfile);
+							myframe.setTitle(fmyfile.getName());
+							saveasflag = true;
+							saveflag = true;
+							editflag = false;
+						}
+						else
+						{
+							JOptionPane.showMessageDialog(fta, "Wrong Password Cannot Decrypt File!!", "Error!", JOptionPane.ERROR_MESSAGE);
+							return;
+						}
 					}
 					else
 					{

@@ -59,49 +59,38 @@ public class FileSecurityOptions
 		return mypass;
 	}
 
-	public void encryptFileData(String strkey, File filetobeenc)
+	public boolean encryptFileData(String strkey, File filetobeenc)
 	{
-		try
-		{
-			keyString = strkey;
-			doCrypto(Cipher.ENCRYPT_MODE, filetobeenc);
-		}
-		catch(Exception e)
-		{}
+		keyString = strkey;
+		return doCrypto(Cipher.ENCRYPT_MODE, filetobeenc);
 	}
-
-	public void decryptFileData(String strkey, File filetobedec)
+	
+	public boolean decryptFileData(String strkey, File filetobedec)
 	{
-		try
-		{
-			keyString = strkey;
-			doCrypto(Cipher.DECRYPT_MODE, filetobedec);
-		}
-		catch(Exception e)
-		{}
+		keyString = strkey;
+		return doCrypto(Cipher.DECRYPT_MODE, filetobedec);
 	}
-
-	public void doCrypto(int cipherMode, File filepassed)
+	
+	public boolean doCrypto(int cipherMode, File filepassed)
 	{
 		try
 		{
+			FileInputStream fisob = new FileInputStream(filepassed);
 			Key skeyspec = new SecretKeySpec(keyString.getBytes(),ALGORITHM);
 			Cipher myciob = Cipher.getInstance(ALGORITHM);
 			myciob.init(cipherMode, skeyspec);
-		
-			FileInputStream fisob = new FileInputStream(filepassed);
 			byte[] inpbytes = new byte[(int) filepassed.length()];
 			fisob.read(inpbytes);
-
+			fisob.close();
 			byte[] opbytes = myciob.doFinal(inpbytes);
-
 			FileOutputStream fosob = new FileOutputStream(filepassed);
 			fosob.write(opbytes);
-
-			fisob.close();
 			fosob.close();
+			return true;
 		}
 		catch(Exception e)
-		{}
+		{
+			return false;
+		}
 	}
 }

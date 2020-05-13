@@ -93,6 +93,13 @@ class MyTextEditor extends JFrame implements ActionListener, KeyListener, Window
 		this.setJMenuBar(mymenubar);
 		mytextarea.addMouseListener(this);
 
+		try
+		{
+			this.setIconImage(ImageIO.read(new File(System.getProperty("user.dir")+"\\EditorTools\\QE.png")));
+		}
+		catch(Exception e)
+		{}
+
 		JMenu m1 = new JMenu("File"); 
 		JMenu m2 = new JMenu("Edit"); 
 		JMenu m3 = new JMenu("Search"); 
