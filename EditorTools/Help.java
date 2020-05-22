@@ -15,8 +15,8 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import javax.swing.JScrollPane;
 
-public class Help extends JFrame implements ActionListener {
-    JDialog hpframe=new JDialog();
+public class Help implements ActionListener {
+    JFrame hpframe=new JFrame();
     protected JTextField textField;
     protected JTextArea textArea;
     protected JScrollPane scrollPane;
@@ -46,19 +46,18 @@ public class Help extends JFrame implements ActionListener {
         JButton searchb=new JButton("Help");
         searchb.addActionListener(this);
 
-        setLayout(new GridBagLayout());
+        hpframe.setLayout(new GridBagLayout());
         GridBagConstraints c = new GridBagConstraints();
         c.gridwidth = GridBagConstraints.REMAINDER;
  
         c.fill = GridBagConstraints.HORIZONTAL;
-        add(textField, c);
-        add(searchb,c);
+        hpframe.add(textField, c);
+        hpframe.add(searchb,c);
         c.fill = GridBagConstraints.BOTH;
         c.weightx = 1.0;
         c.weighty = 1.0;
-        add(scrollPane, c);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        hpframe.add(scrollPane);
+        hpframe.add(scrollPane, c);
+        //hpframe.add(scrollPane);
         hpframe.setSize(500,500);  
         hpframe.setLocationRelativeTo(null);
     }

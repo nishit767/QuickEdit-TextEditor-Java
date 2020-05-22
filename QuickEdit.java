@@ -10,7 +10,7 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
-import javax.swing.ImageIcon;
+import javax.imageio.ImageIO;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseListener;
 import java.awt.event.ActionEvent;
@@ -175,7 +175,7 @@ class MyTextEditor extends JFrame implements ActionListener, KeyListener, Window
 
 	public void windowClosing(WindowEvent we) 
 	{
-		if(!fo.saveflag && fo.editflag)
+		if(!fo.saveflag && !fo.editflag)
 			dispose();
 		else if(fo.saveflag && !fo.editflag)
 			dispose();
