@@ -183,9 +183,9 @@ public class FileOptions implements DocumentListener
                 try(OutputStream ops = new FileOutputStream(System.getProperty("user.dir")+"\\config.properties"))
 				{
 					Properties prop = new Properties();
-					prop.setProperty(fmyfile.getAbsolutePath()+"n",ft.font1.getName());
-					prop.setProperty(fmyfile.getAbsolutePath()+"s",""+ft.font1.getStyle());
-					prop.setProperty(fmyfile.getAbsolutePath()+"sz",""+ft.font1.getSize());
+					prop.setProperty(fmyfile.getAbsolutePath()+"n",fta.getFont().getName());
+					prop.setProperty(fmyfile.getAbsolutePath()+"s",""+fta.getFont().getStyle());
+					prop.setProperty(fmyfile.getAbsolutePath()+"sz",""+fta.getFont().getSize());
 					prop.store(ops,null);
 				}
 				catch(Exception e)
@@ -227,9 +227,9 @@ public class FileOptions implements DocumentListener
 					try(OutputStream ops = new FileOutputStream(System.getProperty("user.dir")+"\\config.properties"))
 					{
 						Properties prop = new Properties();
-						prop.setProperty(fmyfile.getAbsolutePath()+"n",ft.font1.getName());
-						prop.setProperty(fmyfile.getAbsolutePath()+"s",""+ft.font1.getStyle());
-						prop.setProperty(fmyfile.getAbsolutePath()+"sz",""+ft.font1.getSize());
+						prop.setProperty(fmyfile.getAbsolutePath()+"n",fta.getFont().getName());
+						prop.setProperty(fmyfile.getAbsolutePath()+"s",""+fta.getFont().getStyle());
+						prop.setProperty(fmyfile.getAbsolutePath()+"sz",""+fta.getFont().getSize());
 						prop.store(ops,null);
 					}
 					catch(Exception e)
@@ -273,9 +273,9 @@ public class FileOptions implements DocumentListener
 					try(OutputStream ops = new FileOutputStream(System.getProperty("user.dir")+"\\config.properties"))
 					{
 						Properties prop = new Properties();
-						prop.setProperty(fmyfile.getAbsolutePath()+"n",ft.font1.getName());
-						prop.setProperty(fmyfile.getAbsolutePath()+"s",""+ft.font1.getStyle());
-						prop.setProperty(fmyfile.getAbsolutePath()+"sz",""+ft.font1.getSize());
+						prop.setProperty(fmyfile.getAbsolutePath()+"n",fta.getFont().getName());
+						prop.setProperty(fmyfile.getAbsolutePath()+"s",""+fta.getFont().getStyle());
+						prop.setProperty(fmyfile.getAbsolutePath()+"sz",""+fta.getFont().getSize());
 						prop.store(ops,null);
 					}
 					catch(Exception e)
